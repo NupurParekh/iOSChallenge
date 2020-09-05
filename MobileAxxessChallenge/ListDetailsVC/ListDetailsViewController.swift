@@ -52,22 +52,22 @@ class ListDetailsViewController: UIViewController {
         listDate.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(80)
             make.height.equalTo(22)
-            make.top.equalToSuperview().offset(80)
-            make.right.equalToSuperview().offset(-10)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+            make.right.equalToSuperview().offset(-16)
         }
         
         listImage.snp.makeConstraints { (make) -> Void in
             make.width.equalTo(340)
             make.height.equalTo(200)
             make.centerX.equalTo(self.view)
-            make.top.equalToSuperview().offset(120)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(60)
         }
         
         listData.snp.makeConstraints { (make) -> Void in
-            make.left.equalToSuperview().offset(10)
-            make.top.equalToSuperview().offset(100)
-            make.right.equalToSuperview().offset(-10)
-            make.bottom.equalToSuperview().offset(-10)
+            make.left.equalToSuperview().offset(16)
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(40)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
         }
     }
     
